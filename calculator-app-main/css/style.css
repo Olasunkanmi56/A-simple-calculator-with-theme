@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css?family=League+Spartan:700&display=swap");
+
+:root {
+    /* ### Theme 1 */
+    /* #### Backgrounds */
+    --Very-dark-desaturated-blue-main-background: hsl(222, 26%, 31%);
+    --Very-dark-desaturated-blue-toggle-background-keypad-background: hsl(223, 31%, 20%);
+    --Very-dark-desaturated-blue-screen-background: hsl(224, 36%, 15%);
+    /* #### Keys */
+    --Desaturated-dark-blue-key-background: hsl(225, 21%, 49%);
+    --Desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+    --Red-key-background-toggle: hsl(6, 63%, 50%);
+    --Dark-red-key-shadow: hsl(6, 70%, 34%);
+    --Light-grayish-orange-key-background: hsl(30, 25%, 89%);
+    --Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+    /* #### Text */
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+
+body {
+    font-family: "League+Spartan",sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px #000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.theme-container h3 {
+    margin-right: 1rem;
+    font-size: 12px;
+}
+
+
+.input {
+    height: 20px;
+    width: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    background-color:var(--Very-dark-desaturated-blue-toggle-background-keypad-background);
+    position: relative;
+    left: 10px;
+}
+
+[id="theme1"], [id="theme2"], [id="theme3"] {
+    appearance: none;
+    position: absolute;
+    width: 15px;
+    cursor: pointer;
+    height: 15px;
+    border-radius: 30px;
+    top: 2px;
+    transition: 0.5s;
+}
+  
+[id="theme1"] { 
+    left: 10px;
+}
+  
+[id="theme2"] {
+    left: 33px;
+}
+  
+[id="theme3"] {
+    left: 55px;
+}
+
+input:checked {
+    background-color:var(--Red-key-background-toggle);
+}
+  
+label {
+    position: absolute;
+    top: -16px;
+}
+  
+label[for="theme1"] {
+    left: 13px;
+    margin-inline: -0.2rem;
+}
+  
+label[for="theme2"] {
+    left: 20px;
+    margin-inline: 1.2rem;
+}
+  
+label[for="theme3"] {
+    left: 26px;
+    margin-inline: 2.7rem;
+
+}
+
+
+.display-screen {
+    width: 100%;
+}
+
+.display {
+    margin: 20px 1px 10px;
+    height: 100px;
+    max-width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 7px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 32px;
+    font-weight: 800;
+    overflow-x: scroll;
+}
+
+.display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button#equal {
+    width: 130px;
+}
+
+button#reset {
+    width: 130px;
+}
+
+/* theme 1 */ 
+
+body{
+    background-color: var(--Very-dark-desaturated-blue-main-background);
+}
+
+.header, .theme-container {
+    color: var(--White);
+}
+
+.display {
+    color:var(--White) ;
+    background-color: var(--Very-dark-desaturated-blue-screen-background);
+}
+
+table {
+    padding: 15px;
+    border-radius: 7px;
+    background-color: var(--Very-dark-desaturated-blue-toggle-background-keypad-background);
+}
+
+.btn-number, .btn-operator {
+    background-color: var(--Light-grayish-orange-key-background);
+    color:var(--Very-dark-grayish-blue);
+    box-shadow: 0 5px 0px var( --Grayish-orange-key-shadow);
+}
+
+.btn-operator-del , .btn-reset{
+    color: var(--White);
+    box-shadow: 0px 5px 0px var(--Desaturated-dark-blue-key-shadow) ;
+    background-color: var(--Desaturated-dark-blue-key-background);
+}
+
+.btn-equal {
+    color: var(--White);
+    box-shadow: 0px 5px 0px var( --Dark-red-key-shadow) ;
+    background-color: var(--Red-key-background-toggle);
+}
+
+
+
+
+
+ 

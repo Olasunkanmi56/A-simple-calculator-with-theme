@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="">
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body >
+  <div class="container">
+    <div class="calculator dark">
+       <div class="header ">
+           <h1>calc</h1>
+           <div class="theme-container ">
+              <h3>THEME</h3>
+              <div class="input">
+                    <div class="theme-toggler" id="3">
+                        <input id="theme1" type="radio" name="theme" value="0" checked>
+                        <label for="theme1">1</label>
+                    </div>
+                    <div class="theme-toggler" id="2">
+                        <label for="theme2">2</label>
+                        <input id="theme2" type="radio" value="1" name="theme">
+                  </div>
+                    <div class="theme-toggler" id="1">
+                        <label for="theme3">3</label>
+                        <input id="theme3" type="radio" value="2" name="theme">
+              </div>
+              </div>
+           </div>
+       </div>
+       <div class="display-screen ">
+           <div class="display "></div>
+       </div>
+       <div class="buttons">
+        <table class="t">
+            <tr>
+                <td><button class="btn-number  " id="7">7</button></td>
+                <td><button class="btn-number " id="8">8</button></td>
+                <td><button class="btn-number  " id="9">9</button></td>
+                <td><button class="btn-operator-del " id="backspace">DEL</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn-number  " id="4">4</button></td>
+                <td><button class="btn-number  " id="5">5</button></td>
+                <td><button class="btn-number  " id="6">6</button></td>
+                <td><button class="btn-operator  " id="+">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn-number  " id="1">1</button></td>
+                <td><button class="btn-number  " id="2">2</button></td>
+                <td><button class="btn-number " id="3">3</button></td>
+                <td><button class="btn-operator  " id="-">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn-number  " id=".">.</button></td>
+                <td><button class="btn-number  " id="0">0</button></td>
+                <td><button class="btn-operator  " id="/">/</button></td>
+                <td><button class="btn-operator  " id="*">x</button></td> 
+            </tr>
+            <tr>
+                <td colspan="2"><button class="btn-reset  " id="reset">RESET</button></td> 
+                <td colspan="2"><button class="btn-equal  " id="equal">=</button></td> 
+            </tr>
+        </table>
+     </div>
+  </div>
+  </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
